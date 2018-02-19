@@ -1,0 +1,86 @@
+#OK{
+	color: #3CC7F4;
+	font-family: "Arial Black", Gadget, sans-serif	;
+	
+}
+#OK:hover{
+	color: #B0B0B0;
+	
+}
+#Kliknuto{
+	color: #B0B0B0;
+		font-family: "Arial Black", Gadget, sans-serif	;
+
+}
+h2{
+	font-family: "Arial Black", Gadget, sans-serif	;
+	color: 	#383838;
+
+}
+
+main{
+	
+		margin-bottom: 10px;
+		margin-top:77px;
+		border-radius: 20px;
+		background-color: white;
+		padding: 25px;
+		font-family: 'Patrick Hand';
+		font-size: 17px;
+
+	}
+#carouselExampleIndicators{	 
+
+		width:50%;
+	margin: 0px auto;
+
+	  
+
+}
+
+.carousel-item.active img {
+	margin: 0px auto;
+	width:100%;
+
+}
+.col-sm-5 {
+   
+    margin: 0 0%;
+	
+	
+}
+
+#komentar{
+	color: green;
+	}
+	
+ul li a
+{
+	color: #3CC7F4;
+
+}
+ul li a:hover
+{
+	text-decoration: none;
+
+	color: yellow;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

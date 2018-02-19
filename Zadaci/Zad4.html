@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="stilovi.css">
+  <script src="skripta.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<h2 align=center>Unos i Ispis 3</h2>
+
+<h4 id="komentar" style="margin-top:50px;" >/*Napisati program u C-u kojim se omogućava unos sekundi, a na ekranu se ispisuje koliko je to
+sati minuta i sekundi u fomatu hh:mm:ss*/</h4>
+<div style="border-radius:20px;background: #202020; overflow:hidden;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include &lt;stdio.h&gt;</span>
+
+ <span style="color: #d0d0d0">main()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">unosSec,</span> <span style="color: #d0d0d0">sati,</span> <span style="color: #d0d0d0">min,</span> <span style="color: #d0d0d0">sec;</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesite broj sekundi: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;unosSec);</span>
+
+	<span style="color: #d0d0d0">sati</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">unosSec</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">3600</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">min</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(unosSec-(sati*</span><span style="color: #3677a9">3600</span><span style="color: #d0d0d0">))</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">60</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">sec</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(unosSec-(sati*</span><span style="color: #3677a9">3600</span><span style="color: #d0d0d0">))</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">60</span><span style="color: #d0d0d0">;</span>
+	
+        <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n%d s = %d h : %d min : %d sec&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">unosSec,</span> <span style="color: #d0d0d0">sati,</span> <span style="color: #d0d0d0">min,</span> <span style="color: #d0d0d0">sec);</span>
+
+        <span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+<h4 id="komentar" style="margin-top:50px;" >/*Napisati program u C-u kojim se omogućava unos trocifrenog broja, a na ekranu se ispisuju njegove cifre i njihov proizvod*/</h4>
+<div style="border-radius:20px;background: #202020; overflow:hidden ;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include &lt;stdio.h&gt;</span>
+
+ <span style="color: #d0d0d0">main()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">broj,</span> <span style="color: #d0d0d0">sto,</span> <span style="color: #d0d0d0">des,</span> <span style="color: #d0d0d0">jed,</span> <span style="color: #d0d0d0">proizvod;</span>
+	
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesite trocifreni broj: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;broj);</span>
+
+	<span style="color: #d0d0d0">sto</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">broj</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">100</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">des</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(broj</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">100</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">jed</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">(broj</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">100</span><span style="color: #d0d0d0">)</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">10</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">proizvod</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">sto</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">des</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">jed;</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nPrva cifra: %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">sto);</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nDruga cifra: %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">des);</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nTreća cifra: %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">jed);</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nProizvod je: %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">proizvod);</span> 
+
+
+        <span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<button style="margin-top:10px;" type="button"   class="btn btn-secondary float-right" data-toggle="modal" data-target="#myModal" >Kompajler</button>
+<div  class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Online C kompajler</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <iframe src="https://repl.it/repls/WavyOutlandishAnaconda" style=" border-radius:20px;" class="container-fluid" height="500px" >show</iframe> 
+
+		</div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Izađi</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>

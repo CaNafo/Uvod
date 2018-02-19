@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <link type="text/css" rel="stylesheet" href="stilovi.css">
+  <script src="skripta.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<h2 align=center>Unos i Ispis 5</h2>
+<h4 id="komentar" style="margin-top:50px;" >/*Napisati program u programskom jeziku C kojim se omogućava unos jednog malog slova alfabeta, a zatim 
+na ekran ispisati slovo koje je unijeto i njegovo veliko slovo. */</h4>
+<div style="border-radius:20px;background: #202020; overflow:auto;hidden:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+ <span style="color: #d0d0px">main()</span>
+ <span style="color: #d0d0d0">{</span>
+	 <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">slovo,</span> <span style="color: #d0d0d0">velikoSlovo;</span>
+	
+	 <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite jedno malo slovo alfabeta: &quot;</span><span style="color: #d0d0d0">);</span>
+	 <span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%c&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;slovo);</span>
+
+	 <span style="color: #d0d0d0">velikoSlovo</span> <span style="color: #d0d0d0">=</span><span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">slovo</span> <span style="color: #d0d0d0">-</span> <span style="color: #ed9d13">&#39;a&#39;</span><span style="color: #d0d0d0">;</span>
+
+	 <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Slovo koje ste unijeli je \&quot;%c\&quot;, a njegovo veliko slovo je \&quot;%c\&quot;.\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">slovo,</span> <span style="color: #d0d0d0">velikoSlovo);</span>
+	 
+	 <span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+<h4 id="komentar" style="margin-top:50px;" >/*Napisati program u programskom jeziku C kojim se omogućava unos dva slova alfabeta, a zatim 
+se vrši njihova zamjena. Na ekran ispisati slova prije i poslije zamjene. (Zamjena ne smije biti prividna već se mijenja sadržaj varijabli) */</h4>
+<div style="border-radius:20px;background: #202020; overflow:hidden;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+ <span style="color: #d0d0d0">main()</span>
+ <span style="color: #d0d0d0">{</span>
+	 <span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">prvoSlovo,</span> <span style="color: #d0d0d0">drugoSlovo,</span> <span style="color: #d0d0d0">pom;</span>
+	
+	 <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite dva slova alfabeta: &quot;</span><span style="color: #d0d0d0">);</span>
+	 <span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%c %c&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;prvoSlovo,</span> <span style="color: #d0d0d0">&amp;drugoSlovo);</span>
+	 
+	 <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nSlova prije zamjene su: %c %c.\n&quot;</span><span style="color: #d0d0d0">,prvoSlovo,</span> <span style="color: #d0d0d0">drugoSlovo);</span>
+
+	 <span style="color: #d0d0d0">pom</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">prvoSlovo;</span>
+	 <span style="color: #d0d0d0">prvoSlovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">drugoSlovo;</span>
+	 <span style="color: #d0d0d0">drugoSlovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pom;</span>
+
+	 <span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nSlova nakon zamjene su: %c %c.\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">prvoSlovo,</span> <span style="color: #d0d0d0">drugoSlovo);</span>
+	 
+	 <span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+<button style="margin-top:10px;" type="button"   class="btn btn-secondary float-right" data-toggle="modal" data-target="#myModal" >Kompajler</button>
+<h5 id="objasnjenje"style="margin-top:50px;">Napomena!!!</h5>
+<h5 id="objasnjenje"style="margin-top:20px;">Ukoliko na ekranu želite ispisati neki od rezervisanih karaktera kao: " % \ . Neophodno je
+to napisati u sledećem formatu: printf("\\ %% \" "); . </h5>
+<img style="margin-top:20px; margin-left:10px; border-radius:20px;" src="napomena.png" alt="Greška pri učitavanju slike..." />
+<div  class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Online C kompajler</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <iframe src="https://repl.it/repls/WavyOutlandishAnaconda" style=" border-radius:20px;" class="container-fluid" height="500px" >show</iframe> 
+
+		</div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Izađi</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
