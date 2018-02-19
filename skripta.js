@@ -86,3 +86,14 @@ function korisnici() {
     y.style.display = "none";
 
 } 
+var i = 0;
+var txt = 'Uvod u programiranje';
+var speed = 100;
+
+function typeWriter() {
+  if (i < txt.length) {
+    document.getElementById("naslov").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}

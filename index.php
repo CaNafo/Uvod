@@ -77,7 +77,7 @@
 
 
 </head>
-<body class="bg-dark" onload="setInterval(vrijeme,60)">
+<body class="bg-dark" onload="setInterval(vrijeme,60),typeWriter()">
   
 <div class="container-fluid">
 <nav class=" navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
@@ -87,7 +87,7 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navb">
-      <h3 style="color: white; margin: 0 auto;">Uvod u programiranje</h3>
+      <h3 style="color: white; margin: 0 auto;" id="naslov"></h3>
   </div>
 </nav>
 
