@@ -86,6 +86,7 @@ function korisnici() {
     y.style.display = "none";
 
 } 
+
 var i = 0;
 var txt = 'Uvod u programiranje';
 var speed = 100;
