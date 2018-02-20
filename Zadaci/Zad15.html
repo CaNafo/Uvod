@@ -16,69 +16,79 @@
   <script src="http://code.jquery.com/jquery-latest.js"></script>
 </head>
 <body>
-<h2 align=center>For petlja 4 (For petlja unutar for petlje)</h2>
+<h2 align=center>For petlja 5 (For petlja unutar for petlje)</h2>
 
-<h4 id="komentar" >/*Napisati program na programskom jeziku C koji za unijeti broj 'n' ispisuje "piramidu" zvjezdica
+<h4 id="komentar" >/*Napisati program na programskom jeziku C koji za unijeti broj 'n' ispisuje "piramidu" slova
     npr. za n=5 
-   <br>&#160;&#160;&#160;&#160; *   
-   <br>&#160;&#160;&#160;***
-   <br>&#160;&#160;*****
-   <br>&#160;*******
-   <br>********* */</h4>
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A   
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;BCD
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;EFGHI
+   <br>&#160;&#160;&#160;JKLMNOP
+   <br>QRSTUVWXY 
+   <br>(U koliko se dođe do posljednjeg slova alfabeta potrebno je nastaviti ispisivati slova od početka npr. X Y Z A B...)*/</h4>
 <!-- HTML generated using hilite.me --><div style="border-radius: 20px;background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
 <span style="color: #d0d0d0">main()</span>
 <span style="color: #d0d0d0">{</span>
 	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">n;</span>
-	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite broj n: &quot;</span><span style="color: #d0d0d0">);</span>
-	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;n);</span>
+	<span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">slovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">;</span> 
 
-	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #999999; font-style: italic">//For za redove</span>
-	<span style="color: #d0d0d0">{</span>
-		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;</span> <span style="color: #d0d0d0">n-i;</span> <span style="color: #d0d0d0">j++)</span> <span style="color: #999999; font-style: italic">//For za kolone</span>
-		<span style="color: #d0d0d0">{</span>						
-			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot; &quot;</span><span style="color: #d0d0d0">);</span><span style="color: #999999; font-style: italic">//Ovaj printf služi za odmicanje zvjezdica od početka konzole 			</span>
-		<span style="color: #d0d0d0">}</span>			   <span style="color: #999999; font-style: italic">//Da bi bolje razumjeli šta se u stvari dešava možete umjesto razmaka</span>
-						<span style="color: #999999; font-style: italic">//Upisati neki drugi karakter npr printf(&quot;-&quot;); umjesto printf(&quot; &quot;);</span>
-		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;=</span> <span style="color: #d0d0d0">i*</span><span style="color: #3677a9">2</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++)</span>
-		<span style="color: #d0d0d0">{</span>						
-			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;*&quot;</span><span style="color: #d0d0d0">);</span>	   
-		<span style="color: #d0d0d0">}</span>
-	
-		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span><span style="color: #999999; font-style: italic">//Prebacivanje u novi red</span>
-	<span style="color: #d0d0d0">}</span>
-
-	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
-<span style="color: #d0d0d0">}</span>
-</pre></div>
-<h4 id="komentar" style="margin-top: 50px;" >/*Napisati program na programskom jeziku C koji za unijeti broj 'n' ispisuje "piramidu" brojeva
-    npr. za n=5 
-   <br>&#160;&#160;&#160;&#160; 1   
-   <br>&#160;&#160;&#160;123
-   <br>&#160;&#160;12345
-   <br>&#160;1234567
-   <br>123456789 */</h4>
-<!-- HTML generated using hilite.me --><div style="border-radius: 20px;background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
-<span style="color: #d0d0d0">main()</span>
-<span style="color: #d0d0d0">{</span>
-	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">n;</span>
-	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">brojac;</span>
 	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite broj n: &quot;</span><span style="color: #d0d0d0">);</span>
 	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;n);</span>
 
 	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span> 
 	<span style="color: #d0d0d0">{</span>
-		<span style="color: #d0d0d0">brojac</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span><span style="color: #999999; font-style: italic">//Postavljanje brojaca za printanje</span>
-				  <span style="color: #999999; font-style: italic">// Nakon svakog ciklusa vanjske petlje on se vraca na vrijednost 1</span>
-			     <span style="color: #999999; font-style: italic">//Zato uvijek dobijamo sekvencu brojeva &quot;1 2 3 ...&quot;</span>
 		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;</span> <span style="color: #d0d0d0">n-i;</span> <span style="color: #d0d0d0">j++)</span> 
 		<span style="color: #d0d0d0">{</span>						
 			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot; &quot;</span><span style="color: #d0d0d0">);</span>			
-		<span style="color: #d0d0d0">}</span>			   
-					
+		<span style="color: #d0d0d0">}</span>			   				
 		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;=</span> <span style="color: #d0d0d0">i*</span><span style="color: #3677a9">2</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>				
+			<span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(slovo&gt;</span><span style="color: #ed9d13">&#39;Z&#39;</span><span style="color: #d0d0d0">)</span> <span style="color: #999999; font-style: italic">//Uslov za restartovanje brojača slova</span>
+				<span style="color: #d0d0d0">slovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">;</span>
+
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%c&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">slovo++);</span>			
+		<span style="color: #d0d0d0">}</span>
+	
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+<h4 id="komentar" style="margin-top:50px;">/*Napisati program na programskom jeziku C koji za unijeti broj 'n' ispisuje "piramidu" slova
+    npr. za n=5 
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;A   
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;&#160;BcD
+   <br>&#160;&#160;&#160;&#160;&#160;&#160;EfGhI
+   <br>&#160;&#160;&#160;JkLmNoP
+   <br>QrStUvWxY 
+   <br>(U koliko se dođe do posljednjeg slova alfabeta potrebno je nastaviti ispisivati slova od početka npr. X Y Z A B...)*/</h4>
+<!-- HTML generated using hilite.me --><div style="border-radius: 20px;background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #d0d0d0">main()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">n;</span>
+	<span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">slovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">;</span> 
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite broj n: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;n);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span> 
+	<span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;</span> <span style="color: #d0d0d0">n-i;</span> <span style="color: #d0d0d0">j++)</span> 
 		<span style="color: #d0d0d0">{</span>						
-			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,brojac++);</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot; &quot;</span><span style="color: #d0d0d0">);</span>			
+		<span style="color: #d0d0d0">}</span>			   				
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;=</span> <span style="color: #d0d0d0">i*</span><span style="color: #3677a9">2</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++,</span> <span style="color: #d0d0d0">slovo++)</span>
+		<span style="color: #d0d0d0">{</span>				
+			<span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(slovo&gt;</span><span style="color: #ed9d13">&#39;Z&#39;</span><span style="color: #d0d0d0">)</span> <span style="color: #999999; font-style: italic">//Uslov za restartovanje brojača slova</span>
+				<span style="color: #d0d0d0">slovo</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">;</span>
 			
+			<span style="color: #6ab825; font-weight: bold">if</span><span style="color: #d0d0d0">(j%</span><span style="color: #3677a9">2</span><span style="color: #d0d0d0">==</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>  <span style="color: #999999; font-style: italic">//Uslov koji provjerava da li se slovo nalazi na parnom ili</span>
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%c&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">slovo);</span>  <span style="color: #999999; font-style: italic">//neparnom mjestu u koloni</span>
+			<span style="color: #6ab825; font-weight: bold">else</span>
+				<span style="color: #d0d0d0">printf</span><span style="color: #d0d0d0">(</span><span style="color: #ed9d13">&quot;%c&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">slovo-</span><span style="color: #ed9d13">&#39;A&#39;</span><span style="color: #d0d0d0">+</span><span style="color: #ed9d13">&#39;a&#39;</span><span style="color: #d0d0d0">);</span><span style="color: #999999; font-style: italic">//Pošto su slova dekadni bojevi u ASCII tabeli</span>
+								<span style="color: #999999; font-style: italic">//dozvoljene su operacije oduzimanja i sabiranja</span>
+					   <span style="color: #999999; font-style: italic">//tako da lako dobijamo malo slovo od velikog i obrnuto</span>
 		<span style="color: #d0d0d0">}</span>
 	
 		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
