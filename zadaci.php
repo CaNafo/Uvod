@@ -87,7 +87,9 @@
     else
         echo '<h4> Dobro došli ' . $_SESSION['User'] .'</h4>';
     ?>
+            <div>
          Kontakt: ca_na@outlook.com
+            </div>
 		</div>
         
         <!-- Modal footer -->
@@ -103,7 +105,7 @@
   <p align=right id="Vrijeme"></p>
 
 
-  <div class="bg-dark" style="color:white; border-top-left-radius: 25px; border-bottom-left-radius: 25px; float:left; width: 200px; height: 1000px; overflow-y: scroll; ">
+  <div class="bg-dark" style="color:white; border-top-left-radius: 25px; border-bottom-left-radius: 25px; float:left; width: 200px; height: 1400px; overflow-y: scroll; ">
   <h3 align=center>Uvodni zadaci</h3>
 <ul id="Zadaci">
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad1.html');" >Hello World</a></li>
@@ -123,9 +125,9 @@
 <h3 align="center">Petlje</h3>
 <ul>
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad11.html');" >For petlja 1</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad12.html');" >For petlja 2</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad13.html');" >For petlja 3</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad14.html');" >For petlja 4</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
@@ -174,7 +176,7 @@
 </ul>
     </div>
 	<div>
-<iframe  style="posmargin-left: 10px; border-top-right-radius: 25px; border-bottom-right-radius: 25px;"id="Kodovi" src="Zadaci/Zad1.html" class="col-10"  height="1000"></iframe>
+<iframe  style="posmargin-left: 10px; border-top-right-radius: 25px; border-bottom-right-radius: 25px;"id="Kodovi" src="Zadaci/Zad1.html" class="col-10"  height="1400"></iframe>
 </div>
 
   </main>
