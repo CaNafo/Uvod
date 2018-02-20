@@ -130,7 +130,7 @@
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad14.html');" >For petlja 4</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad15.html');" >For petlja 5</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad16.html');" >For petlja 6</a></li> 
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad17.html');" >While petlja 1</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
