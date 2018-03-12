@@ -83,7 +83,10 @@
                     
         
             
-         Kontakt: ca_na@outlook.com
+        <div style="margin-top:50px;">
+			Autor: Dejan Čančar
+		<br>Kontakt: ca_na@outlook.com
+            </div>
 		</div>
         
         <!-- Modal footer -->

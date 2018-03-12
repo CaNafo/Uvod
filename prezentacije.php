@@ -83,8 +83,10 @@
         <div class="modal-body">
             <h4> Dobro došli <?php echo $_SESSION['User'] ?> </h4>
             
-       <p > Kontakt: ca_na@outlook.com </p>
-		</div>
+		<div style="margin-top:50px;">
+			Autor: Dejan Čančar
+		<br>Kontakt: ca_na@outlook.com
+            </div>		</div>
         
         <!-- Modal footer -->
         <div class="modal-footer">

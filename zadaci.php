@@ -87,13 +87,18 @@
     else
         echo '<h4> Dobro došli ' . $_SESSION['User'] .'</h4>';
     ?>
-            <div>
-         Kontakt: ca_na@outlook.com
+		
+            <div style="margin-top:50px;">
+                    Autor: Dejan Čančar
+		<br>Kontakt: ca_na@outlook.com
+                
+
             </div>
 		</div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
+
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Izađi</button>
         </div>
         
@@ -131,9 +136,9 @@
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad15.html');" >For petlja 5</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad16.html');" >For petlja 6</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad17.html');" >While petlja 1</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad18.html');" >While petlja 2</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad19.html');" >While petlja 3</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad20.html');" >While petlja 4</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
