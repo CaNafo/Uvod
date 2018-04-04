@@ -55,23 +55,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
   <script src="skripta.js"></script>
   <link type="text/css" rel="stylesheet" href="stilovi.css">
-  <style>
-      table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-
-td, th {
-    border: 1px solid #dddddd;
-    text-align: center;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-  </style>
+  
 
 </head>
 <body class="bg-dark" onload="logovi()">
@@ -109,7 +93,7 @@ tr:nth-child(even) {
   </div>
 </nav>
     <main>
-           
+        
 
                  <div id="logovi">
   <button class="button btn-info" style="border-radius: 10px; margin: 20px;" onclick="korisnici();">Prikaži sve korisnike</button>    

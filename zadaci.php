@@ -139,16 +139,14 @@
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad18.html');" >While petlja 2</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad19.html');" >While petlja 3</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad20.html');" >While petlja 4</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad21.html');" >Do While petlja 1</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad22.html');" >Do While petlja 2</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad23.html');" >Do While petlja 3</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad24.html');" >Do While petlja 4</a></li> 
 </ul>
 <h3 align="center">Nizovi </h3>
 <ul>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Niz.html');" >Unos i ispis niza</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
