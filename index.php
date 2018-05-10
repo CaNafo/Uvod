@@ -1,5 +1,10 @@
 <?php 
     require("config.php");
+	if(!empty($_SESSION['User'])) 
+    {
+        header("Location: pocetna.php");
+        die("Redirecting to pocetna.php"); 
+    }
     if(!empty($_POST)){
              $name = $_POST['username'];
              $result = mysqli_query($conn, "SELECT * FROM users

@@ -146,8 +146,8 @@
 </ul>
 <h3 align="center">Nizovi </h3>
 <ul>
-<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Niz.html');" >Unos i ispis niza</a></li> 
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Niz.html');" >Unos i ispis niza 1</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad2Niz.html');" >Unos i ispis niza 2</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>

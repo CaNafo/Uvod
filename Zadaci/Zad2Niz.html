@@ -17,10 +17,12 @@
 </head>
 <body>
 
-<h2 align=center>Unos i ispis niza 1</h2>
+<h2 align=center>Unos i ispis niza 2</h2>
 
-    <h4 id="komentar" >/*Napisati program na programskom jeziku C u koji se unosi i ispisuje niz cijelih brojeva.*/</h4>
-    <!-- HTML generated using hilite.me --><div style="border-radius: 20px; background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+    <h4 id="komentar" >/*Napisati program na progamskom jeziku C u koji se unosi niz cijelih brojeva, zatim se svaki
+neparan broj zamjenjuje nulom. Ispisati niz prije i poslije transformacije.*/</h4>
+  
+<!-- HTML generated using hilite.me --><div style="border-radius: 20px; background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
 <span style="color: #d0d0d0">main()</span>
 <span style="color: #d0d0d0">{</span>
 	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">n,</span> <span style="color: #d0d0d0">i;</span>
@@ -34,40 +36,21 @@
 		<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;niz[i]);</span>
 	<span style="color: #d0d0d0">}</span>
 
-	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUneseni niz je: \n&quot;</span><span style="color: #d0d0d0">);</span>
-
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\Niz prije transformacije je: \n&quot;</span><span style="color: #d0d0d0">);</span>
 	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span>
 	<span style="color: #d0d0d0">{</span>
 		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz[i]);</span>
 	<span style="color: #d0d0d0">}</span>
-	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
-	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
-<span style="color: #d0d0d0">}</span>
-</pre></div>
-    <h4 id="komentar" style="margin-top: 50px;" >/*Napisati program na progamskom jeziku C u koji se unosi niz cijelih brojeva, zatim se prebrojava
-i ispisuje koliko ima parnih brojeva u nizu. Ispisati te brojeve.*/</h4>
-<!-- HTML generated using hilite.me --><div style="border-radius: 20px; background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
-<span style="color: #d0d0d0">main()</span>
-<span style="color: #d0d0d0">{</span>
-	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">n,</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">brojParnih</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
-	
-	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Koliko brojeva zelite unijeti u niz: &quot;</span><span style="color: #d0d0d0">);</span>
-	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;n);</span>
-
 	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span>
 	<span style="color: #d0d0d0">{</span>
-		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite %d. broj: &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
-		<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;niz[i]);</span>
-		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(niz[i]</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
-			<span style="color: #d0d0d0">brojParnih++;</span>
+		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(niz[i]</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">!=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+			<span style="color: #d0d0d0">niz[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
 	<span style="color: #d0d0d0">}</span>
-
-	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\Parnih brojeva ima %d i to su: \n&quot;</span><span style="color: #d0d0d0">,brojParnih);</span>
-
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\Niz poslije transformacije je: \n&quot;</span><span style="color: #d0d0d0">);</span>
 	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span>
 	<span style="color: #d0d0d0">{</span>
-		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(niz[i]</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
-			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz[i]);</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz[i]);</span>
 	<span style="color: #d0d0d0">}</span>
 	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
 	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
