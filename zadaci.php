@@ -148,12 +148,12 @@
 <ul>
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad1Niz.html');" >Unos i ispis niza 1</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad2Niz.html');" >Unos i ispis niza 2</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad3Niz.html');" >Unos i ispis niza 3</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad4Niz.html');" >Unos i ispis niza 4</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad5Niz.html');" >Unos i ispis niza 5</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad6Niz.html');" >Unos i ispis niza 6</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad7Niz.html');" >Unos i ispis niza 7</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad8Niz.html');" >Unos i ispis niza 8</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>

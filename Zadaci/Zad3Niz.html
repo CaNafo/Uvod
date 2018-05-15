@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<h2 align=center>Nizovi 3</h2>
+
+    <h4 id="komentar" >/*Unijeti niz karaktera sa tastature, a zatim napraviti novi niz karaktera koji će biti identičan prvoj polovini
+unesenog niza karaktera.*/</h4>
+<!-- HTML generated using hilite.me --><div style="border-radius: 20px;background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #d0d0d0">main()</span>
+
+<span style="color: #d0d0d0">{</span>
+
+	<span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">niz[</span><span style="color: #3677a9">20</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">niz1[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">];</span>
+
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">duzina</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite niz karaktera: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%s&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;niz);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">niz[i]</span> <span style="color: #d0d0d0">!=</span> <span style="color: #ed9d13">&#39;\0&#39;</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span>
+
+		<span style="color: #d0d0d0">duzina++;</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;duzina</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">2</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span>
+
+		<span style="color: #d0d0d0">niz1[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">niz[i];</span>
+
+	<span style="color: #d0d0d0">niz1[duzina</span> <span style="color: #d0d0d0">/</span> <span style="color: #3677a9">2</span><span style="color: #d0d0d0">]</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;\0&#39;</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nNovi niz je: %s\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz1);</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;PAUSE&quot;</span><span style="color: #d0d0d0">);</span>
+
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<h4 id="komentar" style="margin-top: 50px;" >/*Unijeti dva niza karaktera sa tastature, a zatim napraviti novi niz karaktera u koji treba nadovezati drugi na prvi uneseni niz karaktera.*/</h4>
+<!-- HTML generated using hilite.me --><div style="border-radius: 20px;background: #202020; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include &lt;stdio.h&gt;</span>
+
+<span style="color: #d0d0d0">main()</span>
+
+<span style="color: #d0d0d0">{</span>
+
+	<span style="color: #6ab825; font-weight: bold">char</span> <span style="color: #d0d0d0">niz[</span><span style="color: #3677a9">20</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">niz1[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">niz2[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">];</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite dva niza karaktera: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">d</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%s%s&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;niz1,</span> <span style="color: #d0d0d0">&amp;niz2);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">niz1[i]</span> <span style="color: #d0d0d0">!=</span> <span style="color: #ed9d13">&#39;\0&#39;</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span>
+
+		<span style="color: #d0d0d0">niz[d++]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">niz1[i];</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">niz2[i]</span> <span style="color: #d0d0d0">!=</span> <span style="color: #ed9d13">&#39;\0&#39;</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span>
+
+		<span style="color: #d0d0d0">niz[d++]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">niz2[i];</span>
+
+	<span style="color: #d0d0d0">niz[d]</span> <span style="color: #d0d0d0">=</span> <span style="color: #ed9d13">&#39;\0&#39;</span><span style="color: #d0d0d0">;</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nNovi niz je: %s\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz);</span>
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;PAUSE&quot;</span><span style="color: #d0d0d0">);</span>
+
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+
+<button style="margin-top:10px;" type="button"   class="btn btn-secondary float-right" data-toggle="modal" data-target="#myModal" >Kompajler</button>
+<div  class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Online C kompajler</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <iframe src="https://repl.it/repls/WavyOutlandishAnaconda" style=" border-radius:20px;" class="container-fluid" height="500" >show</iframe> 
+
+		</div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Izađi</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</body>
+</html>
