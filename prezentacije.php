@@ -136,11 +136,11 @@
 			 	  while ($row = mysqli_fetch_array($result)) {
 					    echo "<div class='col-lg-4'style='margin-top: 50px;' align=center>";
 					   if(!strcmp($_SESSION['ModStat'],"A")) {
-						  echo "<form action='prezentacije.php' class='container' method='post'><button class='button btn-danger' type=s'submit' value='".$row['ID']."' name='DEL' style='  border-radius: 10px;'>Ukloni prezentaciju</button></form>";
+						  echo "<form  action='prezentacije.php' class='container' method='post'><button class='button btn-danger' type=s'submit' value='".$row['ID']."' name='DEL' style=' margin: 10px;  border-radius: 10px;'>Ukloni prezentaciju</button></form>";
 					   }
 						    
                                 echo "
-				  <iframe src=".$row['Link']." style=' border-radius: 40px;' height='600px' width='100%'  frameborder='0' >This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
+				  <iframe src=".$row['Link']." style=' border-radius:40px;' height='600px' width='100%'  frameborder='0' >This is an embedded <a target='_blank' href='https://office.com'>Microsoft Office</a> presentation, powered by <a target='_blank' href='https://office.com/webapps'>Office Online</a>.</iframe>
 				  </div>";
 			  }
            if(!strcmp($_SESSION['ModStat'],"A")) 

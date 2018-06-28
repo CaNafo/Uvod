@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 20, 2018 at 04:36 PM
--- Server version: 5.7.14
--- PHP Version: 7.0.10
+-- Host: 127.0.0.1:3306
+-- Generation Time: Jun 28, 2018 at 01:08 AM
+-- Server version: 5.7.21
+-- PHP Version: 5.6.35
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -26,21 +28,45 @@ SET time_zone = "+00:00";
 -- Table structure for table `logs`
 --
 
-CREATE TABLE `logs` (
-  `Id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `logs`;
+CREATE TABLE IF NOT EXISTS `logs` (
+  `Id` int(255) NOT NULL AUTO_INCREMENT,
   `User` varchar(32) NOT NULL,
   `Time` varchar(32) NOT NULL,
-  `Date` varchar(32) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Date` varchar(32) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `logs`
 --
 
 INSERT INTO `logs` (`Id`, `User`, `Time`, `Date`) VALUES
-(24, 'Ivana', '11:02:15', '20. 2. 2018'),
+(27, 'Ivana', '23:59:18', '27. 6. 2018'),
 (21, 'Pipac', '20:32:41', '19. 2. 2018'),
 (23, 'Dejan', '23:37:02', '19. 2. 2018');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prezentacije`
+--
+
+DROP TABLE IF EXISTS `prezentacije`;
+CREATE TABLE IF NOT EXISTS `prezentacije` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `Link` varchar(256) NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `prezentacije`
+--
+
+INSERT INTO `prezentacije` (`ID`, `Link`) VALUES
+(19, 'https://onedrive.live.com/embed?resid=63AA891890832510%21556&amp;authkey=%21AKikM6-sVkxSB98&amp;em=2&amp;wdAr=1.3333333333333333\" width=\"350px\" height=\"286px\" frameborder=\"0\">This is an embedded <a target=\"_blank\" href=\"https://office.com\"'),
+(21, '\"https://onedrive.live.com/embed?resid=63AA891890832510%21683&amp;authkey=%21AI1bck6NGhCefUQ&amp;em=2&amp;wdAr=1.3333333333333333\" width=\"350px\" height=\"286px\" frameborder=\"0\">This is an embedded <a target=\"_blank\" href=\"https://office.com\"'),
+(22, '\"https://onedrive.live.com/embed?resid=63AA891890832510%21558&amp;authkey=%21AAZqZvzpAfRpqno&amp;em=2&amp;wdAr=1.3333333333333333\" width=\"350px\" height=\"286px\" frameborder=\"0\">This is an embedded <a target=\"_blank\" href=\"https://office.com\"');
 
 -- --------------------------------------------------------
 
@@ -48,12 +74,14 @@ INSERT INTO `logs` (`Id`, `User`, `Time`, `Date`) VALUES
 -- Table structure for table `users`
 --
 
-CREATE TABLE `users` (
-  `Id` int(255) NOT NULL,
+DROP TABLE IF EXISTS `users`;
+CREATE TABLE IF NOT EXISTS `users` (
+  `Id` int(255) NOT NULL AUTO_INCREMENT,
   `User` varchar(32) NOT NULL,
   `ModStat` varchar(32) NOT NULL,
-  `Pass` varchar(256) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `Pass` varchar(256) NOT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -67,37 +95,8 @@ INSERT INTO `users` (`Id`, `User`, `ModStat`, `Pass`) VALUES
 (5, 'Dejan', '', 'e3431a8e0adbf96fd140103dc6f63a3f8fa343ab'),
 (6, 'Test', '', '58bd2c615ce3fbfa69b1e0e309b610e40cb4c83f'),
 (7, 'Pipac', '', 'e3431a8e0adbf96fd140103dc6f63a3f8fa343ab');
+COMMIT;
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `logs`
---
-ALTER TABLE `logs`
-  ADD PRIMARY KEY (`Id`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`Id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `logs`
---
-ALTER TABLE `logs`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `Id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

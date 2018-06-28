@@ -154,19 +154,15 @@
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad6Niz.html');" >Unos i ispis niza 6</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad7Niz.html');" >Unos i ispis niza 7</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad8Niz.html');" >Unos i ispis niza 8</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad9Niz.html');" >Unos i ispis niza 9</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad10Niz.html');" >Unos i ispis niza 10</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad11Niz.html');" >Unos i ispis niza 11</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad12Niz.html');" >Unos i ispis niza 12</a></li> 
 </ul>
 <h3 align="center">Matrice</h3>
 <ul>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Mat.html');" >Unos i ispis matrice 1</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad2Mat.html');" >Unos i ispis matrice 2</a></li> 
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>
 <li><a>Zadatak</a></li>

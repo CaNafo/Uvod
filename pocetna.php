@@ -56,9 +56,6 @@
 
   <button type="button"  class="btn btn-info" data-toggle="modal" data-target="#myModal" > Informacije</button>     
   <span></span>  <button type="button"  class="btn btn-warning" onclick="location.href='logout.php'" style="float: right; margin-left: 10px;">Logout</button>
-  		 
-     
-    
     
   </div>
 </nav>
