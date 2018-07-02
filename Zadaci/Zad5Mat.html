@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <h2 align=center>Matrice 5 </h2>
+
+
+    
+        <h4 id="komentar" >/*Napisati C program koji sa standardnog ulaza učitava elemente realne matrice dimenzija 5 x 5, 
+            te izračunava sumu elemenata svake kolone i sumu elemenata svakog reda. Za unos i pohranjivanje matrice koristite dvodimenzionalni niz, 
+            dok za pohranjivanje suma po redovima i kolonama trebate koristiti jednodimenzionalni niz. Program takođe treba pronaći:
+            * u kojoj koloni je najmanja suma, * u kojem redu je najveća suma,
+            te ispisati na standardni izlaz unesenu matricu, redne brojeve i sume pronadjene kolone, odnosno, reda.  */</h4>
+
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span>
+
+	<span style="color: #999999; font-style: italic">// Definisanje varijabli </span>
+	<span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">matrica[</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">SUMA[</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">sumaR,</span> <span style="color: #d0d0d0">sumaK;</span> 
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,j,</span> <span style="color: #d0d0d0">Kolona,</span> <span style="color: #d0d0d0">Red;</span> 
+
+	<span style="color: #999999; font-style: italic">// Unos elemenata matrice </span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesi elemente matrice matrica[5,5]: \n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;i++)</span> 
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;j++){</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;[%d,%d]: &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">j+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
+			<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%f&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;matrica[i][j]);</span>
+		<span style="color: #d0d0d0">}</span>     
+
+	<span style="color: #999999; font-style: italic">/* Postavljanje vrijednosti elemenata niza SUMA na 0 (jer vrijednosti niza SUMA[] nisu definisane. */</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span> 
+		<span style="color: #d0d0d0">SUMA[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span>
+
+	<span style="color: #999999; font-style: italic">/* Racunanje suma po redovima. Sabiramo sve brojeve prvog reda, znaci „i“ se ne mijenja, a „j“ se uvecava za 1 sve do 5.</span>
+<span style="color: #999999; font-style: italic">	I kada se sabere tih 5 brojeva, to je suma prvog reda i zapisuje se u SUMA[0], zatim se isto ponavlja za ostale redove, </span>
+<span style="color: #999999; font-style: italic">	tako sto se samo „i“ uvecava za 1 i prelazi time na iduci red. */</span> 
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span> 
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++)</span> 
+			<span style="color: #d0d0d0">SUMA[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">SUMA[i]</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">matrica[i][j];</span>
+
+	<span style="color: #999999; font-style: italic">/* Nalazenje najvece od izracunatih suma. Postavlja se da je prva suma najveca, i zatim se provjerava da li od preostalih ima neka koja je veca,</span>
+<span style="color: #999999; font-style: italic">	i ako je veca, onda se ta suma postavlja da je najveca. </span>
+<span style="color: #999999; font-style: italic">	Vrijednost „i+1“ nam predstavlja broj reda u kojem je ta suma </span>
+<span style="color: #999999; font-style: italic">	(na pocetku stavili smo da je „i=1“ jer ispred stoji da je „sumaR=SUMA[0]“. */</span> 
+	
+	<span style="color: #d0d0d0">sumaR</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">SUMA[</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">];</span> <span style="color: #d0d0d0">Red</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span> 
+		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(sumaR&lt;SUMA[i])</span> <span style="color: #d0d0d0">{</span> 
+			<span style="color: #d0d0d0">sumaR</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">SUMA[i];</span>
+			<span style="color: #d0d0d0">Red</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> 
+		<span style="color: #d0d0d0">}</span>
+
+	<span style="color: #999999; font-style: italic">// Postavljanje vrijednosti elemenata niza SUMA na 0 </span>
+	<span style="color: #6ab825; font-weight: bold">for</span><span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;i++)</span>
+		<span style="color: #d0d0d0">SUMA[i]=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> 
+
+		<span style="color: #999999; font-style: italic">/* Racunanje suma po kolonama... ista procedura, samo smo zamijenili mjesta brojaca „i, j“ unutar „matrica[i][j]“. */</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++)</span> 
+			<span style="color: #d0d0d0">SUMA[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">SUMA[i]</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">matrica[j][i];</span>
+
+	<span style="color: #999999; font-style: italic">// Pronalazenje najmanje od izracunatih suma</span>
+	<span style="color: #d0d0d0">sumaK=SUMA[</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">];</span> 
+	<span style="color: #d0d0d0">Kolona=</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> 
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;i++)</span> 
+		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(sumaK&gt;SUMA[i])</span> <span style="color: #d0d0d0">{</span>
+			<span style="color: #d0d0d0">sumaK=SUMA[i];</span>
+			<span style="color: #d0d0d0">Kolona=i+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span>
+		<span style="color: #d0d0d0">}</span> 
+
+	<span style="color: #999999; font-style: italic">// Ispis matrice matrica</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nMatrica matrica[5,5]: \n&quot;</span><span style="color: #d0d0d0">);</span> 
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;i++){</span> 
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;</span><span style="color: #3677a9">5</span><span style="color: #d0d0d0">;j++)</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%.2f &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">matrica[i][j]);</span> 
+	<span style="color: #d0d0d0">}</span> 
+
+	<span style="color: #999999; font-style: italic">// Ispis rjesenja </span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nU %d koloni je najmanja suma koja iznosi %.2f\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">Kolona,</span> <span style="color: #d0d0d0">sumaK);</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nU %d redu je najveca suma koja iznosi %.2f\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">Red,</span> <span style="color: #d0d0d0">sumaR);</span> 
+
+	<span style="color: #999999; font-style: italic">// Kraj programa</span>
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+
+        <h4 id="komentar" style="margin-top: 50px;" >/*Napisati program za unos matrice dimenzija N M, i sortiranje parnih kolona u nerastućem poretku. Smatrati nultu kolonu kao parnu. Ispisati matricu prije i nakon transformacije*/</h4>
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">A[</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">n,</span> <span style="color: #d0d0d0">m,</span> <span style="color: #d0d0d0">c,</span> <span style="color: #d0d0d0">d,</span> <span style="color: #d0d0d0">pom;</span>  <span style="color: #999999; font-style: italic">//i,j- brojaci za prolazak kroz matricu, d - brojac za prolazak kroz elemente po koloni, m,n - dimenzije matrice, pom - promjenjiva prilikom zamjene</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesi dimenzije matrice N M: \n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;n,</span> <span style="color: #d0d0d0">&amp;m);</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;n;</span> <span style="color: #d0d0d0">i++)</span>
+	<span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;m;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite %d element %d kolone:\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
+			<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;A[i][j]);</span>
+		<span style="color: #d0d0d0">}printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Matrica prije transformacije:\n\n&quot;</span><span style="color: #d0d0d0">);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span>
+	<span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">m;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">A[i][j]);</span>
+		<span style="color: #d0d0d0">}</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span>
+	<span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">m;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>
+			<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">%</span> <span style="color: #3677a9">2</span> <span style="color: #d0d0d0">==</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">)</span>
+			<span style="color: #d0d0d0">{</span>
+				<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(d</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">d</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">m;</span> <span style="color: #d0d0d0">d++)</span>
+				<span style="color: #d0d0d0">{</span>
+					<span style="color: #d0d0d0">pom</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">A[i][j];</span>
+					<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(A[i][j]&gt;A[i][d])</span>
+					<span style="color: #d0d0d0">{</span>
+						<span style="color: #d0d0d0">A[i][j]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">A[i][d];</span>
+						<span style="color: #d0d0d0">A[i][d]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pom;</span>
+					<span style="color: #d0d0d0">}</span>
+				<span style="color: #d0d0d0">}</span>
+			<span style="color: #d0d0d0">}</span>
+		<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Matrica posle transformacije:\n\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;n;</span> <span style="color: #d0d0d0">i++)</span>
+	<span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;m;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">A[i][j]);</span>
+		<span style="color: #d0d0d0">}printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+
+	<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<button style="margin-top:10px;" type="button"   class="btn btn-danger float-right" onclick=" window.open('https://repl.it/repls/WavyOutlandishAnaconda','_blank')" >Kompajler</button>
+</body>
+</html>

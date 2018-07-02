@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <h2 align=center>Funkcije 1 </h2>
+
+
+    
+        <h4 id="komentar" >/*Napisati funkciju "Sabiranje" kojoj se proslijeđuju sabirci, a na ekran ispisuje njihov zbir*/</h4>
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">Sabiranje</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">b);</span> <span style="color: #999999; font-style: italic">//Navodjenje potpisa funkcije (Moguce je napisati potpunu funkicju iznad main metode</span>
+							<span style="color: #999999; font-style: italic">//ali zbog preglednosti se praktikuje njeno definisanje ispod main metode)</span>
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #d0d0d0">b;</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite sabirke a i b: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;a,</span> <span style="color: #d0d0d0">&amp;b);</span>
+
+	<span style="color: #d0d0d0">Sabiranje(a,</span> <span style="color: #d0d0d0">b);</span> <span style="color: #999999; font-style: italic">//poziv funkcije</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+
+<span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">Sabiranje</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>  <span style="color: #999999; font-style: italic">//Funkcija je tipa VOID sto znaci da ne vraca nista, a da bi mogla funkcionisati potrebno joj je proslijediti</span>
+								<span style="color: #999999; font-style: italic">// u ovom slucaju dva paramtetra tipa int</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">zbir;</span>
+	
+	<span style="color: #d0d0d0">zbir</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">b;</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Zbir %d + %d = %d\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">a,</span> <span style="color: #d0d0d0">b,</span> <span style="color: #d0d0d0">zbir);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+
+        <h4 id="komentar" style="margin-top: 50px;" >/*Napisati funkciju "Sabiranje" kojoj se proslijeđuju sabirci, a funkcija vraća vrijednost sabiranja i u main metodi se vrši ispis rezultata*/</h4>
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">Sabiranje</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">b);</span> <span style="color: #999999; font-style: italic">//Promjenjive koje se proslijedjuju i promjenjive koje su navedene kao parametri funkcije ne moraju imati isto ime</span>
+							<span style="color: #999999; font-style: italic">//u funkciji se radi samo sa vrijednostima promjenjivih, te nakon zavrsetka rada funkcije sve promjenjive unutar funkcije se uništavaju.</span>
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #d0d0d0">b,</span> <span style="color: #d0d0d0">zbir;</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite sabirke a i b: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d %d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;a,</span> <span style="color: #d0d0d0">&amp;b);</span>
+
+	<span style="color: #d0d0d0">zbir</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">Sabiranje(a,</span> <span style="color: #d0d0d0">b);</span> <span style="color: #999999; font-style: italic">//poziv funkcije promjenjivj zbir se dodjeljuje vrijednost koja je izracunata unutar funkcije</span>
+
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Zbir %d + %d = %d \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">a,</span> <span style="color: #d0d0d0">b,</span> <span style="color: #d0d0d0">zbir);</span>
+
+	<span style="color: #999999; font-style: italic">//printf(&quot;Zbir %d + %d = %d \n&quot;, a, b, Sabiranje(a, b));  Moguce je i ovako napisati, tj. bez pomocne promjenjive &quot;zbir&quot;</span>
+	
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+
+<span style="color: #d0d0d0">}</span>
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">Sabiranje</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">a,</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">b)</span> <span style="color: #d0d0d0">{</span>  <span style="color: #999999; font-style: italic">//Funkcija je tipa int sto znaci da vraca podatak tipa int, a da bi mogla funkcionisati potrebno joj je proslijediti</span>
+								<span style="color: #999999; font-style: italic">// u ovom slucaju dva paramtetra tipa int</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">zbir;</span>
+	
+	<span style="color: #d0d0d0">zbir</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">a</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">b;</span>
+
+	<span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">zbir;</span> <span style="color: #999999; font-style: italic">//Funkcija vraca podatak tipa int</span>
+ <span style="color: #999999; font-style: italic">// return a+b;  moguce je i ovako napisati</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<button style="margin-top:10px;" type="button"   class="btn btn-danger float-right" onclick=" window.open('https://repl.it/repls/WavyOutlandishAnaconda','_blank')" >Kompajler</button>
+</body>
+</html>

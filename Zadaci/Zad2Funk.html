@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+    <h2 align=center>Funkcije 2 </h2>
+
+
+    
+        <h4 id="komentar" >/*Napisati dvije funkcije, unosNiza i sortiranjeNiza. Dužina i elementi niza se unose sa tastature. Proizvoljno izabrati mjesto ispisa prije i nakon sortiranja, kao i način soritranja.*/</h4>
+
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">unosNiza</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[]);</span> 
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">sortirajNiz</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[],</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">n);</span>
+
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span>
+<span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[</span><span style="color: #3677a9">100</span><span style="color: #d0d0d0">];</span>
+
+	<span style="color: #d0d0d0">unosNiza(niz);</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">unosNiza</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[])</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">duzina,i;</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite duzinu niza: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;duzina);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">duzina;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesite %d. element niza: &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
+		<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;niz[i]);</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nNiz prije transformacije: \n&quot;</span><span style="color: #d0d0d0">);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">duzina;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span>  <span style="color: #d0d0d0">niz[i]);</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">sortirajNiz(niz,</span> <span style="color: #d0d0d0">duzina);</span>
+<span style="color: #d0d0d0">}</span>
+
+<span style="color: #6ab825; font-weight: bold">void</span> <span style="color: #447fcf">sortirajNiz</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">niz[],</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">n)</span> <span style="color: #d0d0d0">{</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">pom;</span>
+	
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">i;</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">j++)</span> <span style="color: #d0d0d0">{</span>
+			<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(niz[i]</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">niz[j])</span>
+			<span style="color: #d0d0d0">{</span>
+				<span style="color: #d0d0d0">pom</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">niz[j];</span>
+				<span style="color: #d0d0d0">niz[j]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">niz[i];</span>
+				<span style="color: #d0d0d0">niz[i]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">pom;</span>
+			<span style="color: #d0d0d0">}</span>
+		<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nNiz nakon transformacije: \n&quot;</span><span style="color: #d0d0d0">);</span>
+
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%d &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">niz[i]);</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+
+        <h4 id="komentar" style="margin-top: 50px;" >/*Napišite funkciju faktor () koja izracunava n! pri cemu je prototip funkcije faktor (): double faktor (int n).
+            Zatim, napisati glavni program koji ucitava neki prirodni broj n, n-izmedju 1 i 10, a zatim izracunava n! pozivom funkcije faktor() i rezultat ispisuje na standardni izlaz. */</h4>
+
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+<span style="color: #999999; font-style: italic">// Deklarisanje prototipa funkcije</span>
+<span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #447fcf">faktor</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">n);</span>
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span> 
+	<span style="color: #999999; font-style: italic">// Deklarisanje varijabli</span>
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">N;</span> <span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #d0d0d0">F;</span> 
+
+	<span style="color: #999999; font-style: italic">//Unos prirodnog broja</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesi prirodan broj N: &quot;</span><span style="color: #d0d0d0">);</span> 
+	<span style="color: #d0d0d0">scanf_s(</span><span style="color: #ed9d13">&quot;%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;N);</span> 
+	<span style="color: #999999; font-style: italic">/* Pozivanje funkcije faktor() i pridruzivanje vrijednosti koju funkcija izracuna varijabli F */</span>
+	<span style="color: #d0d0d0">F=faktor(N);</span>
+	<span style="color: #999999; font-style: italic">// Ispis faktorijele </span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Faktorijela od %d je: %g\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">N,</span> <span style="color: #d0d0d0">F);</span> 
+	<span style="color: #999999; font-style: italic">// Kraj programa </span>
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span> 
+
+	<span style="color: #999999; font-style: italic">/* Funkcija koja racuna vrijednost faktorijele. Funkcija prima prirodan broj N a vraca realan broj (double) kao rezultat. */</span>
+<span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #447fcf">faktor</span><span style="color: #d0d0d0">(</span><span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">n)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i;</span> <span style="color: #6ab825; font-weight: bold">double</span> <span style="color: #d0d0d0">fakt</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> 
+		<span style="color: #999999; font-style: italic">/* Racunanje faktorijele se vrsi tako da se broj od kojeg trazimo faktorijelu pomnozi sa svakim cijelim brojem manjim od sebe a koji je veci od 1.</span>
+<span style="color: #999999; font-style: italic">		Na pocetku je fak=1 jer ako bi bilo 0 dobili bi uzastopno mnozenje sa 0 i nebi dobili ispravan rezultat */</span> 
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">n;</span> <span style="color: #d0d0d0">i&gt;</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i--)</span> <span style="color: #d0d0d0">fakt</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">fakt</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">i;</span> 
+		<span style="color: #999999; font-style: italic">// Vracanje izracunate faktorijele</span>
+		<span style="color: #6ab825; font-weight: bold">return</span> <span style="color: #d0d0d0">fakt;</span> 
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<button style="margin-top:10px;" type="button"   class="btn btn-danger float-right" onclick=" window.open('https://repl.it/repls/WavyOutlandishAnaconda','_blank')" >Kompajler</button>
+</body>
+</html>

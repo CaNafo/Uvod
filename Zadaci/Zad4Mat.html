@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8" />
+<link rel="shortcut icon" href="favicon.png" />
+<title></title>
+
+  <link type="text/css" rel="stylesheet" href="stiloviZad.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<h2 align=center>Matrice 4</h2>
+
+    <h4 id="komentar" >/*Napisati program koji ucitava realnu matricu dimenzija 4x4 te pronalazi najmanji element na glavnoj dijagonali. */</h4>
+
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">()</span> <span style="color: #d0d0d0">{</span> 
+	<span style="color: #999999; font-style: italic">// Deklarisanje varijabli</span>
+	
+	<span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">A[</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">MIN;</span> <span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">i,j;</span>
+	
+	<span style="color: #999999; font-style: italic">/* Unos matrice (koristimo 2 for petlje pri unosu (i su redovi a j su kolone). Brojevi se unose po redovima. */</span> 
+	
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n Unesi matricu A[4][4]: \n&quot;</span><span style="color: #d0d0d0">);</span> 
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">;i++)</span> 
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">;j++)</span>
+		<span style="color: #d0d0d0">{</span> 
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot; [%d,%d] :&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">j+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span>
+			<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%f&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;A[i][j]);</span>
+		<span style="color: #d0d0d0">}</span>
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #3677a9">4</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #d0d0d0">{</span>
+		<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">&lt;</span> <span style="color: #3677a9">4</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j++)</span>
+		<span style="color: #d0d0d0">{</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%.2f &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">A[i][j]);</span>
+		<span style="color: #d0d0d0">}</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span>
+	<span style="color: #999999; font-style: italic">/* Trazenje najmanjeg elementa na dijagonali! </span>
+<span style="color: #999999; font-style: italic">	Postupak je sljedeci. Elementi na dijagonali su tipa [i,j] gdje su i,j jednaki. </span>
+<span style="color: #999999; font-style: italic">	Tako dijagonalni elementi matrice 3x3 su [1,1], [2,2], [3,3]. </span>
+<span style="color: #999999; font-style: italic">	Posto nam trebaju samo elementi kada su (i,j) jednaki koristimo jednu for petlju.</span>
+<span style="color: #999999; font-style: italic">	Na pocetku stavimo da je najmanji element prvi element na poziciji [1,1], u C-u je pozicija (0,0)</span>
+<span style="color: #999999; font-style: italic">	ustvari pozicija (1,1) u realnom svijetu. I ulazimo u for petlju. </span>
+<span style="color: #999999; font-style: italic">	Ispituju se redom brojevi kod kojih su brojaci „i“ i „j“ jednaki. </span>
+<span style="color: #999999; font-style: italic">	Ako je neki od brojeva koji se ispitaju manji od MIN onda se taj broj pridruzi varijabli MIN. */</span>
+	
+	<span style="color: #d0d0d0">MIN=A[</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">];</span> 
+	<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">,j=</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">;i&lt;</span><span style="color: #3677a9">4</span><span style="color: #d0d0d0">;i++,j++)</span> 
+		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(A[i][j]&lt;MIN)</span>
+			<span style="color: #d0d0d0">MIN=A[i][j];</span>
+	<span style="color: #999999; font-style: italic">// Ispis najmanjeg broja na dijagonali </span>
+	
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nNajmanji element na glavnoj dijagonali je: %.2f\n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">MIN);</span> 
+	<span style="color: #999999; font-style: italic">// Kraj programa</span>
+
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<h4 id="komentar" style="margin-top: 50px;" >/*Napisati C program koji ce ucitati dimenzije (RA x KA) realne matrice A (maksimalno 10 x 10) ,
+    dimenzije (RB x KB) realne matrice B (maksimalno 10 x 10), te ucitati elemente tih matrica. Program zatim treba izracunati matricu C koja je proizvod matrica A i B.
+    Na kraju program treba ispisati sve tri matrice: A, B i C. * RA, RB oznacavaju broj redova matrica A i B, respektivno; * KA, KB oznacavaju broj kolona matrica A i B, respektivno. 
+    Prilikom unosa dimenzija matrica program treba provjeriti da li su unesene dimenzije u dozvoljenim granicama, 
+    tj. da li je RA<=10, RB<=10, KA<=10, KB<=10, te isto tako program treba provjeriti da li se matrice mogu množiti, tj. da li je ispunjeno: KA=RB*/</h4>
+
+<!-- HTML generated using hilite.me --><div style="background: #202020; overflow:auto;width:auto;border:solid gray; border-radius:20px; border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #cd2828; font-weight: bold">#include&lt;stdio.h&gt;</span>
+<span style="color: #cd2828; font-weight: bold">#include&lt;stdlib.h&gt;</span>
+
+<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #447fcf">main</span><span style="color: #d0d0d0">(){</span> 
+	<span style="color: #6ab825; font-weight: bold">float</span> <span style="color: #d0d0d0">A[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">B[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">],</span> <span style="color: #d0d0d0">C[</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">][</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">];</span> 
+	<span style="color: #6ab825; font-weight: bold">int</span> <span style="color: #d0d0d0">RA,</span> <span style="color: #d0d0d0">RB,</span> <span style="color: #d0d0d0">KA,</span> <span style="color: #d0d0d0">KB,</span> <span style="color: #d0d0d0">i,</span> <span style="color: #d0d0d0">j,</span> <span style="color: #d0d0d0">k;</span>
+
+	<span style="color: #999999; font-style: italic">// Unos dimenzija prve i druge matrice</span>
+	<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnos dim. matrica A[RA,KA], B[RB,KB], u obliku \&quot;RA,KA,RB,KB\&quot;: &quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%d,%d,%d,%d&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;RA,</span> <span style="color: #d0d0d0">&amp;KA,</span> <span style="color: #d0d0d0">&amp;RB,</span> <span style="color: #d0d0d0">&amp;KB);</span> 
+
+<span style="color: #999999; font-style: italic">// Ispit uslova: da li su dimenzije u intervalu od 1 do 10. </span>
+	<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">((RA&lt;=</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)&amp;&amp;(RA&gt;</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">)&amp;&amp;(RB&lt;=</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)&amp;&amp;(RB&gt;</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">)&amp;&amp;(KA&lt;=</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)&amp;&amp;(KA&gt;</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">)&amp;&amp;(KB&lt;=</span><span style="color: #3677a9">10</span><span style="color: #d0d0d0">)&amp;&amp;(KB&gt;</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">)){</span> 
+
+		<span style="color: #999999; font-style: italic">// Ispit uslova: da li je broj kolona prve matrice i broj redova druge isti. </span>
+		<span style="color: #6ab825; font-weight: bold">if</span> <span style="color: #d0d0d0">(KA==RB){</span> 
+
+<span style="color: #999999; font-style: italic">/* Unos elemenata prve matrice A (pomocu 2 for petlje, objasnjeno u jednom od prethodnih zadataka. */</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesi elemente matrice A[%d,%d]: \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">RA,</span> <span style="color: #d0d0d0">KA);</span> 
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;RA;</span> <span style="color: #d0d0d0">i++)</span> <span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;KA;</span> <span style="color: #d0d0d0">j++)</span>
+			<span style="color: #d0d0d0">{</span>
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesi element [%d,%d]: &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">j</span> <span style="color: #d0d0d0">+</span> <span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span> 
+				<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%f&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;A[i][j]);</span> 
+			<span style="color: #d0d0d0">}</span>
+<span style="color: #999999; font-style: italic">// Unos elemenata druge matrice B </span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nUnesi elemente matrice B[%d,%d]: \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">RB,</span> <span style="color: #d0d0d0">KB);</span>
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;RB;i++)</span> 
+				<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;KB;j++){</span> 
+					<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;Unesi element [%d,%d]: &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">i+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">j+</span><span style="color: #3677a9">1</span><span style="color: #d0d0d0">);</span> 
+					<span style="color: #d0d0d0">scanf(</span><span style="color: #ed9d13">&quot;%f&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">&amp;B[i][j]);</span> 
+				<span style="color: #d0d0d0">}</span> 
+<span style="color: #999999; font-style: italic">/* Racunanje matrice C po formuli C=A*B. Dvije for petlje identicne for petljama pri unosu matrice ili ispisu,</span>
+<span style="color: #999999; font-style: italic">koje „setaju“ po redovima i kolonama matrica A,B,C. </span>
+<span style="color: #999999; font-style: italic">Prema matematickom postupku proizvod matrica A i B je: C[1][1]=A[0][0] * B[0][0] + A[0][1] * B[1][0] + ... + A[0][n] * B[n][0] </span>
+<span style="color: #999999; font-style: italic">sto je primjenjeno na formulu koja se nalazi unutar for petlje sa argumentom „k“.</span>
+<span style="color: #999999; font-style: italic">Argument „k“ se krece od 1 do broja kolona prve matrice, i predstavlja broj sabiraka u formuli iznad.</span>
+<span style="color: #999999; font-style: italic">C[i][j] = 0; je uvedeno jer vrijednost C[i][j] nije definisana, a moramo je koristiti u formuli unutar for petlje po „k“. */</span>
+
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">i&lt;RA;</span> <span style="color: #d0d0d0">i++)</span> 
+				<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">j&lt;KB;</span> <span style="color: #d0d0d0">j++)</span> <span style="color: #d0d0d0">{</span>
+					<span style="color: #d0d0d0">C[i][j]</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> 
+					<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(k</span> <span style="color: #d0d0d0">=</span> <span style="color: #3677a9">0</span><span style="color: #d0d0d0">;</span> <span style="color: #d0d0d0">k&lt;KA;</span> <span style="color: #d0d0d0">k++)</span> 
+						<span style="color: #d0d0d0">C[i][j]</span> <span style="color: #d0d0d0">=</span> <span style="color: #d0d0d0">C[i][j]</span> <span style="color: #d0d0d0">+</span> <span style="color: #d0d0d0">A[i][k]</span> <span style="color: #d0d0d0">*</span> <span style="color: #d0d0d0">B[k][j];</span> 
+				<span style="color: #d0d0d0">}</span>
+			<span style="color: #999999; font-style: italic">// Ispis matrice A  </span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nMatrica A[%d,%d]: \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">RA,</span> <span style="color: #d0d0d0">KA);</span> 
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;RA;i++){</span>
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span> 
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;KA;j++)</span>
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%4.f &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">A[i][j]);</span> 
+			<span style="color: #d0d0d0">}</span>
+			<span style="color: #999999; font-style: italic">// Ispis matrice B </span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nMatrica B[%d,%d]: \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">RB,</span> <span style="color: #d0d0d0">KB);</span> 
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;RB;i++){</span> 
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;KB;j++)</span> 
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%4.f &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">B[i][j]);</span> 
+			<span style="color: #d0d0d0">}</span>
+			<span style="color: #999999; font-style: italic">// Ispis matrice C </span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\nMatrica C[%d,%d]: \n&quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">RA,</span> <span style="color: #d0d0d0">KB);</span> 
+			<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(i=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;i&lt;RA;i++){</span> 
+				<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span> 
+				<span style="color: #6ab825; font-weight: bold">for</span> <span style="color: #d0d0d0">(j=</span><span style="color: #3677a9">0</span><span style="color: #d0d0d0">;j&lt;KB;j++)</span> 
+					<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;%4.f &quot;</span><span style="color: #d0d0d0">,</span> <span style="color: #d0d0d0">C[i][j]);</span> 
+			<span style="color: #d0d0d0">}</span> 
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n&quot;</span><span style="color: #d0d0d0">);</span>
+			<span style="color: #999999; font-style: italic">// Ispis poruka ukoliko podaci nisu regularni </span>
+		<span style="color: #d0d0d0">}</span>
+		<span style="color: #6ab825; font-weight: bold">else</span>
+			<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n Matrice se ne mogu pomnoziti!&quot;</span><span style="color: #d0d0d0">);</span>
+	<span style="color: #d0d0d0">}</span> <span style="color: #6ab825; font-weight: bold">else</span>
+		<span style="color: #d0d0d0">printf(</span><span style="color: #ed9d13">&quot;\n Matrice nisu u odgovarajucem intervalu!&quot;</span><span style="color: #d0d0d0">);</span> 
+	<span style="color: #999999; font-style: italic">// Kraj programa getch</span>
+	<span style="color: #d0d0d0">system(</span><span style="color: #ed9d13">&quot;pause&quot;</span><span style="color: #d0d0d0">);</span>
+<span style="color: #d0d0d0">}</span>
+</pre></div>
+
+<button style="margin-top:10px;" type="button"   class="btn btn-danger float-right" onclick=" window.open('https://repl.it/repls/WavyOutlandishAnaconda','_blank')" >Kompajler</button> 
+</body>
+</html>

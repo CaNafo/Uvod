@@ -126,6 +126,8 @@
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad7.html');" >Uslov If 2</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad9.html');" >Uslov If 3</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad10.html');" >Uslov If 4</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad11Sv.html');" >Switch</a></li> 
+
 </ul>
 <h3 align="center">Petlje</h3>
 <ul>
@@ -163,14 +165,18 @@
 <ul>
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad1Mat.html');" >Unos i ispis matrice 1</a></li> 
 <li><a href="#" onclick="Ucitaj('Zadaci/Zad2Mat.html');" >Unos i ispis matrice 2</a></li> 
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
-<li><a>Zadatak</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad3Mat.html');" >Unos i ispis matrice 3</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad4Mat.html');" >Unos i ispis matrice 4</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad5Mat.html');" >Unos i ispis matrice 5</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad6Mat.html');" >Unos i ispis matrice 6</a></li> 
+
+</ul>
+<h3 align="center">Uvod u funkcije, strukture i pokazivače</h3>
+<ul>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Funk.html');" >Funkcije 1</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad2Funk.html');" >Funkcije 2</a></li> 
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Strukt.html');" >Strukture</a></li>
+<li><a href="#" onclick="Ucitaj('Zadaci/Zad1Pok.html');" >Pokazivači</a></li> 
 
 </ul>
     </div>
